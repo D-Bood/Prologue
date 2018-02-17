@@ -5,17 +5,128 @@
 </div>
 
 <!-- Scripts -->
-<script src="/usr/themes/Prologue/js/skel.min.js"></script>
-<script src="/usr/themes/Prologue/js/util.js"></script>
+<script src="/usr/themes/Prologue/js/skel.min.js" data-no-instant></script>
+<script src="/usr/themes/Prologue/js/util.js" data-no-instant></script>
 <?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
 <script src="/usr/themes/Prologue/js/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
-//main.js
-!function(e){skel.breakpoints({wide:"(min-width: 961px) and (max-width: 1880px)",normal:"(min-width: 961px) and (max-width: 1620px)",narrow:"(min-width: 961px) and (max-width: 1320px)",narrower:"(max-width: 960px)",mobile:"(max-width: 736px)"}),e(function(){var i=e(window),a=e("body");a.addClass("is-loading"),i.on("load",function(){a.removeClass("is-loading")}),skel.vars.IEVersion<9&&e(":last-child").addClass("last-child"),e("form").placeholder(),skel.on("+mobile -mobile",function(){e.prioritize(".important\\28 mobile\\29",skel.breakpoint("mobile").active)}),e('<div id="headerToggle"><a href="#header" class="toggle"></a></div>').appendTo(a),e("#header").panel({delay:200,hideOnClick:!0,hideOnSwipe:!0,resetScroll:!0,resetForms:!0,side:"left",target:a,visibleClass:"header-visible"}),"wp"==skel.vars.os&&skel.vars.osVersion<10&&e("#headerToggle, #header, #main").css("transition","none")})}(jQuery);
-//End main.js
 InstantClick.on('change', function () {
 $('#recaptcha').prepend("<script src=\"https:\/\/recaptcha.net\/recaptcha\/api.js\" async defer data-no-instant><\/script>");
+(function($) {
+
+	skel.breakpoints({
+		wide: '(min-width: 961px) and (max-width: 1880px)',
+		normal: '(min-width: 961px) and (max-width: 1620px)',
+		narrow: '(min-width: 961px) and (max-width: 1320px)',
+		narrower: '(max-width: 960px)',
+		mobile: '(max-width: 736px)'
+	});
+
+	$(function() {
+
+		var	$window = $(window),
+			$body = $('body');
+
+		// Disable animations/transitions until the page has loaded.
+			// $body.addClass('is-loading');
+
+			// $window.on('load', function() {
+				// $body.removeClass('is-loading');
+			// });
+
+		// CSS polyfills (IE<9).
+			if (skel.vars.IEVersion < 9)
+				$(':last-child').addClass('last-child');
+
+		// Fix: Placeholder polyfill.
+			$('form').placeholder();
+
+		// Prioritize "important" elements on mobile.
+			skel.on('+mobile -mobile', function() {
+				$.prioritize(
+					'.important\\28 mobile\\29',
+					skel.breakpoint('mobile').active
+				);
+			});
+
+		// Scrolly links.
+			// $('.scrolly').scrolly();
+
+		// Nav.
+			// var $nav_a = $('#nav a');
+
+			// Scrolly-fy links.
+				// $nav_a
+					// .scrolly()
+					// .on('click', function(e) {
+
+						// var t = $(this),
+							// href = t.attr('href');
+
+						// if (href[0] != '#')
+							// return;
+
+						// e.preventDefault();
+
+						// Clear active and lock scrollzer until scrolling has stopped
+							// $nav_a
+								// .removeClass('active')
+								// .addClass('scrollzer-locked');
+
+						// Set this link to active
+							// t.addClass('active');
+
+					// });
+
+			// Initialize scrollzer.
+				// var ids = [];
+
+				// $nav_a.each(function() {
+
+					// var href = $(this).attr('href');
+
+					// if (href[0] != '#')
+						// return;
+
+					// ids.push(href.substring(1));
+
+				// });
+
+				// $.scrollzer(ids, { pad: 200, lastHack: true });
+
+		// Header (narrower + mobile).
+
+			// Toggle.
+				$(
+					'<div id="headerToggle">' +
+						'<a href="#header" class="toggle"></a>' +
+					'</div>'
+				)
+					.appendTo($body);
+
+			// Header.
+				$('#header')
+					.panel({
+						delay: 200,
+						hideOnClick: true,
+						hideOnSwipe: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'left',
+						target: $body,
+						visibleClass: 'header-visible'
+					});
+
+			// Fix: Remove transitions on WP<10 (poor/buggy performance).
+				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+					$('#headerToggle, #header, #main')
+						.css('transition', 'none');
+
+	});
+
+})(jQuery);
 });
+
 InstantClick.init();
 </script>
 <?php else: ?>
