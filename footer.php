@@ -11,7 +11,6 @@
 <script src="/usr/themes/Prologue/js/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>
 InstantClick.on('change', function () {
-$('#recaptcha').prepend("<script src=\"https:\/\/recaptcha.net\/recaptcha\/api.js\" async defer data-no-instant><\/script>");
 (function($) {
 
 	skel.breakpoints({
@@ -125,8 +124,8 @@ $('#recaptcha').prepend("<script src=\"https:\/\/recaptcha.net\/recaptcha\/api.j
 	});
 
 })(jQuery);
+$('#recaptcha').prepend("<script src=\"https:\/\/recaptcha.net\/recaptcha\/api.js\" async defer data-no-instant><\/script>");
 });
-
 InstantClick.init();
 </script>
 <?php else: ?>

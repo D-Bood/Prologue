@@ -41,7 +41,7 @@ echo $commentClass;
 
         <img class="avatar" src="<?php echo $avatar ?>" alt="<?php echo $comments->author; ?>" width="<?php echo $size ?>" height="<?php echo $size ?>" />
         <div class="comment-main">
-            <p class="comment-at"><?php get_comment_at($comments->coid)?></p>
+            <p class="comment-at"><?php AjaxComment_Plugin::get_comment_at($comments->coid); ?></p>
             <?php $comments->content(); ?>
             <div class="comment-meta">
                 <span class="comment-author"><?php echo $author; ?></span>
@@ -107,7 +107,7 @@ echo $commentClass;
                 <textarea rows="8" cols="50" name="text" placeholder="评论内容" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </div>
     		<div class="12u$">
-                <input type="submit" class="submit"></input>
+                <input type="submit" class="submit" value="提交评论"></input>
 
             </div>
           </div>

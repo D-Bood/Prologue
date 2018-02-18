@@ -43,6 +43,6 @@
 				</article>
 </div>
 </section>
-
+</div>
 
 <?php $this->need('footer.php'); ?>
