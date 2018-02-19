@@ -44,3 +44,18 @@ function hitokoto(){
     //输出
     echo $content;
 }
+//判断首页图片展示
+function index_pic($thiz){
+    if (array_key_exists('img',unserialize($thiz->___fields()))){
+        $thiz->fields->img();
+    }else{
+        preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $thiz->content, $matches);
+        $imgCount = count($matches[0]);
+        if($imgCount >= 1){
+                $img = $matches[2][0];
+        }else{
+                $img = "https://s1.ax1x.com/2017/11/08/BrC4I.jpg";
+        }
+        echo $img;
+    }
+}

@@ -2,7 +2,7 @@
 <?php $this->need('header.php'); ?>
 
 <div id="main">
-<section id="portfolio" class="one dark cover">
+<section class="one dark cover">
   <div class="container">
         <h3 class="archive-title"><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
@@ -20,7 +20,7 @@
     	<?php while($this->next()): ?>
         <div class="4u 12u$(mobile)">
          <article class="item">
-          <a href="<?php $this->permalink() ?>" class="image fit"><img src="/usr/themes/Prologue/images/pic02.jpg" alt="" />
+          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php index_pic($this); ?>); background-size: cover; height: 286px" alt="">
           <header>
            <h3 class="post-title"><?php $this->title() ?></h3>
           </header>

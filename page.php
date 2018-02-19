@@ -10,7 +10,7 @@
 <section class="two">
   <div class="container">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-        <div class="post-content" itemprop="articleBody">
+        <div class="markdown-body">
             <?php $this->content(); ?>
         </div>
     </article>

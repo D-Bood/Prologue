@@ -16,7 +16,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
    <div id="main">
 
     <!-- Intro -->
-     <section id="top" class="one dark cover">
+     <section class="one dark cover">
       <div class="container">
 
        <header>
@@ -27,26 +27,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
      </section>
 
     <!-- Portfolio -->
-     <section id="portfolio" class="two">
+     <section class="two">
       <div class="container">
         <div class="row">
        <?php while($this->next()): ?>
 
         <div class="4u 12u$(mobile)">
          <article class="item">
-          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php $this->fields->img(); ?><?php else: ?><?php
-preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);
-$imgCount = count($matches[0]);
-if($imgCount >= 1){
-$img = $matches[2][0];
-}else{
-$img = "https://s1.ax1x.com/2017/11/08/BrC4I.jpg";
-}
-echo <<<Html
-{$img}
-Html;
-?><?php endif; ?>); background-size: cover; height: 286px" alt="">
-          <header
+          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php index_pic($this); ?>); background-size: cover; height: 286px" alt="">
+          <header>
            <h3 class="post-title"><?php $this->title() ?></h3>
           </header>
          </a></article>
