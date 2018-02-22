@@ -1,6 +1,10 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+function themeInit() {
+ Helper::options()->commentsMaxNestingLevels = 999;//评论回复楼侧最高999层.这个正常设置最高只有7层
+}
+
 function themeConfig($form) {
 	//Pjax加速
 	$search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form',
