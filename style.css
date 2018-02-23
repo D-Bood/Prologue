@@ -1843,7 +1843,7 @@
 }
 
 .comment-at {
-    padding: 0 0 10px 0
+    padding: 0
 }
 
 .comment-close {
@@ -2368,7 +2368,7 @@
 
       #main > section.one {
         background-color: #81918E;
-        background-image: url("images/banner.jpg");
+        // background-image: url("images/banner.jpg");
       }
 
       #main > section.two {

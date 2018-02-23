@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <div id="footer" role="contentinfo">
-&copy; 2013-<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> with <a href="http://www.typecho.org" target="_blank">Typecho</a><br>Original Author: <a href="https://html5up.net/prologue" target="_blank">HTML5 UP</a> Your IP: <?php echo $_SERVER["REMOTE_ADDR"]; ?>
+&copy; 2013-<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> with <a href="http://www.typecho.org" target="_blank">Typecho</a><br>Original Design: <a href="https://html5up.net/prologue" target="_blank">HTML5 UP</a> Your IP: <?php echo $_SERVER["REMOTE_ADDR"]; ?><br><?php hitokoto() ?>
 </div>
 
 <!-- Scripts -->
