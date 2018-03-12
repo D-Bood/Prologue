@@ -43,7 +43,7 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-    <script src="/usr/themes/Prologue/js/jquery.min.js"></script>
+    <script src="<?php $this->options->themeUrl('js/jquery.min.js'); ?>"></script>
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -51,14 +51,14 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
     <![endif]-->
 
     <!-- 通过自有函数输出HTML头部信息 -->
-    <?php $this->header(); ?>
+    <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw=&description=そんな事あるか…'); ?>
 </head>
 
 <!--[if lt IE 8]>
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 <body>
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('font-awesome.min.css'); ?>">
+
 
       <div id="header">
         <div class="top">

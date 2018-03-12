@@ -6,9 +6,9 @@
   <div class="container">
         <h2><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
         <ul class="post-meta">
-<i class="fa fa-user"></i> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>　
-<i class="fa fa-clock-o"></i> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>　
-<i class="fa fa-th"></i> <?php $this->category(','); ?>
+<i class="icon fa-user"></i> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>　
+<i class="icon fa-clock-o"></i> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>　
+<i class="icon fa-th"></i> <?php $this->category(','); ?>
         </ul>
   </div>
 </section>
@@ -28,6 +28,6 @@
 <nav class="page-navi"><span class="prev"><?php $this->thePrev('&laquo; %s', ''); ?></span> <span class="next"><?php $this->theNext('%s &raquo;', ''); ?></span></nav></div>
 </section>
 <?php $this->need('comments.php'); ?>
-</div><!-- end #main-->
+<!-- end #main-->
 
 <?php $this->need('footer.php'); ?>

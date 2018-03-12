@@ -48,6 +48,7 @@ function hitokoto(){
     //输出
     echo $content;
 }
+//随机输出图片
 //判断首页图片展示
 function index_pic($thiz){
     if (array_key_exists('img',unserialize($thiz->___fields()))){

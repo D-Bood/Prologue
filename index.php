@@ -20,7 +20,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       <div class="container">
 
        <header>
-       <h2 class="alt"><p>D-Bood in Tsuchi</p></h2>
+       <h2 class="alt"><p style="font-size: 2em; color: #fff; letter-spacing:2px">其他的危险</p></h2>
        </header>
 
       </div>
@@ -51,7 +51,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         <?php $this->pageLink('上一页','prev');?><?php $this->pageLink('下一页','next');?>
       </div></div>
      </section>
-   </div>
+
 
 <!-- end #main-->
 

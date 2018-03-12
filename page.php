@@ -9,7 +9,7 @@
 </section>
 <section class="two">
   <div class="container">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="post">
         <div class="markdown-body">
             <?php $this->content(); ?>
         </div>
@@ -18,5 +18,5 @@
 </section>
 
 <?php $this->need('comments.php'); ?>
-</div><!-- end #main-->
+<!-- end #main-->
 <?php $this->need('footer.php'); ?>
