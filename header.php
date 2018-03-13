@@ -28,7 +28,7 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
       s///////dNNh///////hN
       NNNNNNNNN NNNNNNNNNNN
 -->
-<html class="no-js">
+<html>
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

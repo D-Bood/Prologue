@@ -20,7 +20,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       <div class="container">
 
        <header>
-       <h2 class="alt"><p style="font-size: 2em; color: #fff; letter-spacing:2px">其他的危险</p></h2>
+       <h2 class="alt"><p style="font-size: 1.8em; color: #fff;">$ sudo rm -rf /</p></h2>
        </header>
 
       </div>
@@ -34,7 +34,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
         <div class="4u 12u$(mobile)">
          <article class="item">
-          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php index_pic($this); ?>); background-size: cover; height: 286px" alt="">
+          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php index_pic($this); ?>); background-size: cover; background-position: center; height: 286px" alt="">
           <header>
            <h3 class="post-title"><?php $this->title() ?></h3>
           </header>
