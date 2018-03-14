@@ -60,7 +60,7 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
 <body>
 
 
-      <div id="header">
+      <div id="header" class="noSelect">
         <div class="top">
 
           <!-- Logo -->

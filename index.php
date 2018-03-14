@@ -34,7 +34,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
         <div class="4u 12u$(mobile)">
          <article class="item">
-          <a href="<?php $this->permalink() ?>" class="image fit" style="background: url(<?php index_pic($this); ?>); background-size: cover; background-position: center; height: 286px" alt="">
+          <a href="<?php $this->permalink() ?>">
+          <div class="image fit" src="<?php index_pic($this); ?>" style="background: url(<?php index_pic($this); ?>); background-size: cover; background-position: center; height: 12em" alt=""></div>
           <header>
            <h3 class="post-title"><?php $this->title() ?></h3>
           </header>

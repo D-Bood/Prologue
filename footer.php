@@ -99,6 +99,7 @@ $('#recaptcha').prepend("<script src=\"https:\/\/recaptcha.net\/recaptcha\/api.j
 });
 InstantClick.init();
 </script>
+<style>#instantclick-bar {height: 3px; box-shadow: #000 0px 0px 1em;background: #e60000; transition: all 0.30s ease-in-out;}</style>
 <?php else: ?>
 <script src="/usr/themes/Prologue/js/main.js"></script>
 <?php endif; ?>
