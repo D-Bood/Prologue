@@ -49,6 +49,19 @@ function hitokoto(){
     echo $content;
 }
 //随机输出图片
+function image_rand_output() {
+    $image_directory = __DIR__ . "/img/";
+    $image_type = array(".jpg",".gif",".png");
+    $dh = dir($image_directory); 
+    while (($image = $dh -> read()) !== false) {
+        if(in_array(strtolower(strrchr($image,".")),$image_type))
+        $image_array[] = $image;
+    }
+    $dh -> close();
+    $key = array_rand($image_array);
+    define("IMG", "/usr/themes/Prologue/img/");
+    echo IMG.$image_array[$key];
+} 
 //判断首页图片展示
 function index_pic($thiz){
     if (array_key_exists('img',unserialize($thiz->___fields()))){
@@ -59,7 +72,7 @@ function index_pic($thiz){
         if($imgCount >= 1){
                 $img = $matches[2][0];
         }else{
-                $img = "https://s1.ax1x.com/2017/11/08/BrC4I.jpg";
+                $img = image_rand_output(); //"https://s1.ax1x.com/2017/11/08/BrC4I.jpg";
         }
         echo $img;
     }
