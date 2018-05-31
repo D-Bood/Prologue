@@ -1,4 +1,19 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php
+    /**
+    * t
+    *
+    * @package custom
+    */
+if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php $this->need('header.php'); ?>
+
+<div id="main">
+<section class="one dark cover">
+  <div class="container">
+        <h2><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
+  </div>
+</section>
+
 <?php
 $GLOBALS['z']  = $this->options->CDNURL;
 function threadedComments($comments, $options) {
@@ -66,7 +81,7 @@ echo $commentClass;
 <?php //print_r($this);?>
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
-	<h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
+	<h3><?php $this->commentsNum(_t('暂无碎语'), _t('仅有一条碎语'), _t('已有 %d 条碎语')); ?></h3>
     
     <?php $comments->listComments(); ?>
 
@@ -74,13 +89,13 @@ echo $commentClass;
     
     <?php endif; ?>
 
-    <?php if($this->allow('comment')): ?>
+    <?php if ($this->user->hasLogin()):?>
     <div id="<?php $this->respondId(); ?>" class="respond">
         <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>
         </div>
     
-    	<h3 id="response"><?php _e('添加新评论'); ?></h3>
+    	<h3 id="response"><?php _e('添加新碎语'); ?></h3>
     	<form method="post" action="<?php $this->commentUrl(); ?>" id="comment-form" role="form">
           <div class="row">
             <?php if($this->user->hasLogin()): ?>
@@ -104,17 +119,17 @@ echo $commentClass;
             </div>
             <?php endif; ?>
     		<div class="12u$">
-                <textarea rows="8" cols="50" name="text" placeholder=<?php _e('评论内容　(本站使用reCAPTCHA作为验证码)'); ?> id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea rows="8" cols="50" name="text" placeholder=<?php _e('碎语内容　(本站使用reCAPTCHA作为验证码)'); ?> id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </div>
     		<div class="12u$">
-                <input type="submit" class="submit" value="提交评论"></input>
+                <input type="submit" class="submit" value="提交碎语"></input>
 
             </div>
           </div>
     	</form>
     </div>
     <?php else: ?>
-    <h3><?php _e('评论已关闭'); ?></h3>
+    <h3><?php _e('⚠⚠⚠⚠⚠⚠⚠⚠'); ?></h3>
     <?php endif; ?>
 </div>
 </section>
@@ -251,3 +266,6 @@ echo $commentClass;
 </script>
 <?php else : ?>
 <?php endif; ?>
+
+<!-- end #main-->
+<?php $this->need('footer.php'); ?>

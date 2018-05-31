@@ -73,10 +73,10 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
           <!-- Nav -->
             <nav id="nav">
               <ul>
-                <li><a href="/" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">首页</span></a></li>
-                <li><a href="/archiver" id="archive-link" class="skel-layers-ignoreHref"><span class="icon fa-th">归档</span></a></li>
-                <li><a href="/music" id="music-link" class="skel-layers-ignoreHref"><span class="icon fa-music">音乐</span></a></li>
-                <li><a href="/about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">关于</span></a></li>
+                <li id="li_index"><a href="/" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">首页</span></a></li>
+                <li id="li_arch"><a href="/archiver" id="archive-link" class="skel-layers-ignoreHref"><span class="icon fa-th">归档</span></a></li>
+                <li id="li_music"><a href="/music" id="music-link" class="skel-layers-ignoreHref"><span class="icon fa-music">音乐</span></a></li>
+                <li id="li_about"><a href="/about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">关于</span></a></li>
               </ul>
             </nav>
 
