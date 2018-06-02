@@ -65,7 +65,7 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
 
           <!-- Logo -->
             <div id="logo">
-              <span class="image avatar48"><img src="/usr/themes/Prologue/images/avatar.png" alt="" /></span>
+              <span class="image avatar48"><img src="https://p2.music.126.net/K5tYuvSDxzCIyhvsxPKMjg==/109951163299716679.jpg" alt="" /></span>
               <h1 id="title">D-Bood</h1>
               <p>を</p>
             </div>

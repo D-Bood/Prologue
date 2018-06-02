@@ -2311,6 +2311,7 @@
 
         #nav ul li .selected  span:before {
           color: #76c8e2;
+          transition: none
         }
 
 /* Footer */
