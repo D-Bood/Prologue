@@ -1580,7 +1580,7 @@
     }
 
   input, textarea, select {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: inherit;
     font-size: 19pt;
     font-weight: 300;
     line-height: 1.75em;
