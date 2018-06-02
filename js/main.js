@@ -114,6 +114,14 @@
 					$('#headerToggle, #header, #main')
 						.css('transition', 'none');
 
+      // Try to control panel
+        $('#nav ul li').each(function() {
+          $this = $(this);
+            console.log($this.children('.skel-layers-ignoreHref'));
+          if ($this.children('.skel-layers-ignoreHref')["0"].attributes["0"].nodeValue == String(window.location.pathname)){
+            $this.children('.skel-layers-ignoreHref').addClass('selected');}
+        });
+
 	});
 
 })(jQuery);

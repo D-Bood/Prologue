@@ -2293,12 +2293,23 @@
         }
 
       #nav ul li a:hover {
-        background: rgba(0, 0, 0, 0.15);
         box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
         color: #fff;
       }
 
         #nav ul li a:hover span:before {
+          color: #76c8e2;
+        }
+
+        #nav ul li .selected {
+          background: rgba(0, 0, 0, 0.15);
+        }
+
+        #nav ul li .selected  span {
+          color: #fff;
+        }
+
+        #nav ul li .selected  span:before {
           color: #76c8e2;
         }
 
