@@ -114,13 +114,16 @@
 					$('#headerToggle, #header, #main')
 						.css('transition', 'none');
 
-      // Try to control panel
+      // Try to control navbar
         $('#nav ul li').each(function() {
-          $this = $(this);
-          if ($this.children('.skel-layers-ignoreHref')["0"].attributes["0"].nodeValue == String(window.location.pathname)){
-            $this.children('.skel-layers-ignoreHref').addClass('selected');}
+          $this = $(this).children('.skel-layers-ignoreHref');
+          if ($this["0"].attributes["0"].nodeValue == String(window.location.pathname)){
+            $this.addClass('selected');}
         });
-
+        if ('/radio' == String(window.location.pathname))
+          $('#nav ul #li_music a').addClass('selected');
+        if (null !== String(window.location.pathname).match('page'))
+          $('#nav ul #li_index a').addClass('selected');
 	});
 
 })(jQuery);
