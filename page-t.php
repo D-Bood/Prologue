@@ -129,6 +129,7 @@ echo $commentClass;
     	</form>
     </div>
     <?php else: ?>
+    <script>alert('危险！请勿靠近！');</script>
     <h3><?php _e('⚠⚠⚠⚠⚠⚠⚠⚠'); ?></h3>
     <?php endif; ?>
 </div>
