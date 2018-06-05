@@ -122,6 +122,7 @@ echo $commentClass;
                 <textarea rows="8" cols="50" name="text" placeholder=<?php _e('碎语内容　(本站使用reCAPTCHA作为验证码)'); ?> id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </div>
     		<div class="12u$">
+                <input type="hidden" name="receiveMail" id="receiveMail" value="yes" />
                 <input type="submit" class="submit" value="提交碎语"></input>
 
             </div>
