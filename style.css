@@ -2393,7 +2393,6 @@
 
       #main > section.one {
         background-color: #444444;
-        height: 15em;
         // background-image: url("images/banner.jpg");
       }
 
@@ -2748,10 +2747,6 @@
 
       #main section.cover {
         padding: 4em 0em;
-      }
-
-      #main > section.one {
-        height: 12em;
       }
 
         #main section.cover header {
