@@ -6,6 +6,9 @@
     */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
+    <?php if (!$this->user->hasLogin()):?>
+        <script>window.location.href="/404";</script>
+    <?php endif; ?>
 
 <div id="main">
 <section class="one dark cover">
@@ -89,7 +92,6 @@ echo $commentClass;
     
     <?php endif; ?>
 
-    <?php if ($this->user->hasLogin()):?>
     <div id="<?php $this->respondId(); ?>" class="respond">
         <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>
@@ -128,10 +130,6 @@ echo $commentClass;
           </div>
     	</form>
     </div>
-    <?php else: ?>
-    <script>alert('危险！请勿靠近！');</script>
-    <h3><?php _e('⚠⚠⚠⚠⚠⚠⚠⚠'); ?></h3>
-    <?php endif; ?>
 </div>
 </section>
 
