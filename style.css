@@ -1,4 +1,5 @@
 @import url("https://fonts.font.im/css?family=Source+Sans+Pro:300,300italic,400,600");
+@import url("https://fonts.font.im/css?family=Noto+Sans+SC:300,300italic,400,600");
 @import url("markdown.css");
 
 /*
@@ -14,7 +15,7 @@
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /* font: inherit; */
     vertical-align: baseline;
     outline: 0;
   }
@@ -1561,7 +1562,7 @@
 
   body {
     background: #dce3e2;
-    font-family: 'Source Sans Pro', -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, "Nimbus Sans L", "Noto Sans SC", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     font-size: 19pt;
     font-weight: 300;
     line-height: 1.75em;
@@ -1966,7 +1967,7 @@
     -webkit-transition: all 0.35s ease-in-out;
     -ms-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
-    font-family: 'Source Sans Pro', -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-family: 'Source Sans Pro', "Noto Sans SC", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   }
 
     form input[type="text"]:focus,
