@@ -6,8 +6,8 @@
   <div class="container">
         <h2><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
         <ul class="post-meta">
-<i class="icon fa-user fa-fw"></i> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>　
-<i class="icon fa-clock-o fa-fw"></i> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date(); ?></time>　
+<i class="icon fa-user fa-fw"></i> <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author" style="font-size: 1.9rem"><?php $this->author(); ?></a>　
+<i class="icon fa-clock-o fa-fw"></i> <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished" style="font-size: 1.9rem"><?php $this->date(); ?></time>　
 <i class="icon fa-th fa-fw"></i> <?php $this->category(','); ?>
         </ul>
   </div>
