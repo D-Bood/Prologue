@@ -65,7 +65,7 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
 
           <!-- Logo -->
             <div id="logo">
-              <span class="image avatar48"><img src="https://p2.music.126.net/K5tYuvSDxzCIyhvsxPKMjg==/109951163299716679.jpg" alt="" /></span>
+              <span class="image avatar48"><img src="<?php echo $this->options->logoUrl; ?>" alt="" /></span>
               <h1 id="title">D-Bood</h1>
               <p>を</p>
             </div>
@@ -73,10 +73,10 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
           <!-- Nav -->
             <nav id="nav">
               <ul>
-                <li id="li_index"><a href="/" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">首页</span></a></li>
-                <li id="li_arch"><a href="/archiver" id="archive-link" class="skel-layers-ignoreHref"><span class="icon fa-th">归档</span></a></li>
-                <li id="li_music"><a href="/music" id="music-link" class="skel-layers-ignoreHref"><span class="icon fa-music">音乐</span></a></li>
-                <li id="li_about"><a href="/about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">关于</span></a></li>
+                <li id="li_index"><a href="/" id="top-link" class="skel-layers-ignoreHref"><span class="iconfont icon-home">首页</span></a></li>
+                <li id="li_arch"><a href="/archiver" id="archive-link" class="skel-layers-ignoreHref"><span class="iconfont icon-archive">归档</span></a></li>
+                <li id="li_music"><a href="/music" id="music-link" class="skel-layers-ignoreHref"><span class="iconfont icon-music">音乐</span></a></li>
+                <li id="li_about"><a href="/about" id="about-link" class="skel-layers-ignoreHref"><span class="iconfont icon-person">关于</span></a></li>
               </ul>
             </nav>
 
@@ -86,11 +86,11 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
 
           <!-- Social Icons -->
             <ul class="icons">
-              <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-              <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-              <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-              <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-              <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+              <?php if ($this->options->twitter) :?><li><a href="<?php echo $this->options->twitter ?>" class="iconfont icon-twitter1" target="_blank"><span class="label">Twitter</span></a></li><?php endif; ?>
+              <?php if ($this->options->facebook) :?><li><a href="<?php echo $this->options->facebook ?>" class="iconfont icon-facebook1" target="_blank"><span class="label">Facebook</span></a></li><?php endif; ?>
+              <?php if ($this->options->github) :?><li><a href="<?php echo $this->options->github ?>" class="iconfont icon-github" target="_blank"><span class="label">Github</span></a></li><?php endif; ?>
+              <?php if ($this->options->youtube) :?><li><a href="<?php echo $this->options->youtube ?>" class="iconfont icon-youtube" target="_blank"><span class="label">YouTube</span></a></li><?php endif; ?>
+              <?php if ($this->options->telegram) :?><li><a href="<?php echo $this->options->telegram ?>" class="iconfont icon-telegram" target="_blank"><span class="label">Email</span></a></li><?php endif; ?>
             </ul>
 
         </div>

@@ -6,9 +6,9 @@
   <div class="container">
         <h2><a itemprop="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
         <ul class="post-meta">
-<i class="icon fa-user fa-fw"></i> <a itemprop="name" class="meta-name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>　
-<i class="icon fa-clock-o fa-fw"></i> <time datetime="<?php $this->date('c'); ?>" class="meta-name" itemprop="datePublished"><?php $this->date(); ?></time>　
-<i class="icon fa-th fa-fw"></i> <?php $this->category(','); ?>
+<i class="iconfont icon-person icon-1.5x"></i> <a itemprop="name" class="meta-name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a>　
+<i class="iconfont icon-date icon-1.5x"></i> <time datetime="<?php $this->date('c'); ?>" class="meta-name" itemprop="datePublished"><?php $this->date(); ?></time>　
+<i class="iconfont icon-category icon-1.5x"></i> <?php $this->category(','); ?>
         </ul>
   </div>
 </section>

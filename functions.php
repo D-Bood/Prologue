@@ -10,7 +10,24 @@ function themeConfig($form) {
 	$search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form',
 	array('Pjax' => _t('启用Pjax加速站点, 勾上即可, 为使原生评论生效需要到设置-评论, 去掉开启垃圾评论过滤'),),array('ShowSearch'), _t('设置开启Pjax'));
 	$form->addInput($search_form->multiMode());
+        $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl',NULL,'','博客头像','在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO<br>可使用QQ头像链接作为LOGO https://avatar.dawnlab.me/qq/（这里填QQ）');
+        $form->addInput($logoUrl);
+        $background = new Typecho_Widget_Helper_Form_Element_Text('background',NULL,'','博客默认封面图','在这里填入一个图片URL地址, 给博客添加一个默认封面图');
+        $form->addInput($background);
+        $github = new Typecho_Widget_Helper_Form_Element_Text('github',NULL,"https://github.com",'Github','在这里填入一个Github地址, 给博客添加一个Github联系方式');
+        $form->addInput($github);
 
+        $twitter = new Typecho_Widget_Helper_Form_Element_Text('twitter',NULL,"https://twitter.com",'Twitter','在这里填入一个Twitter地址, 给博客添加一个Twitter联系方式');
+        $form->addInput($twitter);
+
+        $facebook = new Typecho_Widget_Helper_Form_Element_Text('facebook',NULL,"https://facebook.com",'Facebook','在这里填入一个Facebook地址, 给博客添加一个Facebook联系方式');
+        $form->addInput($facebook);
+
+        $youtube = new Typecho_Widget_Helper_Form_Element_Text('youtube',NULL,"https://youtube.com",'YouTube','在这里填入一个YouTube地址, 给博客添加一个YouTube联系方式');
+        $form->addInput($youtube);
+
+        $telegram = new Typecho_Widget_Helper_Form_Element_Text('telegram',NULL,"https://telegram.com",'Telegram','在这里填入一个Telegram地址, 给博客添加一个Telegram联系方式');
+        $form->addInput($telegram);
 }
 
 //获取评论的锚点链接
@@ -52,14 +69,14 @@ function hitokoto(){
 function image_rand_output() {
     $image_directory = __DIR__ . "/img/";
     $image_type = array(".jpg",".gif",".png");
-    $dh = dir($image_directory); 
+    $dh = dir($image_directory);
     while (($image = $dh -> read()) !== false) {
         if(in_array(strtolower(strrchr($image,".")),$image_type))
         $image_array[] = $image;
     }
     $dh -> close();
     $key = array_rand($image_array);
-    define("IMG", "/usr/themes/Prologue/img/");
+    define("IMG", "https://cdn.jsdelivr.net/gh/D-Bood/img@latest/usr/uploads/random/");
     echo IMG.$image_array[$key];
 } 
 //判断首页图片展示
