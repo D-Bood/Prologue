@@ -2159,10 +2159,9 @@
 }
 
 .https {
-    font-family: FontAwesome;
+    font-family: iconfont;
     font-style: normal;
-    width: 1em; height: 1em;
-    vertical-align: -0.15em;
+    font-size: 1rem;
     fill: currentColor;
     overflow: hidden;
     color: #438d15;
@@ -2645,13 +2644,13 @@
         }
 
           #headerToggle .toggle:before {
-            font-family: FontAwesome;
+            font-family: iconfont;
             text-decoration: none;
             font-style: normal;
             font-weight: normal;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            content: '\f0c9';
+            content: '\e602';
             color: #fff;
             font-size: 18px;
             line-height: 2.25em;

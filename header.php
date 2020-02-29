@@ -66,8 +66,8 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
           <!-- Logo -->
             <div id="logo">
               <span class="image avatar48"><img src="<?php echo $this->options->logoUrl; ?>" alt="" /></span>
-              <h1 id="title">D-Bood</h1>
-              <p>を</p>
+              <h1 id="title"><?php $this->options->title() ?></h1>
+              <p><?php $this->options->description() ?></p>
             </div>
 
           <!-- Nav -->
@@ -90,7 +90,8 @@ Nho:-+osooosssss/--------yo--:yN   　　く　　　　く
               <?php if ($this->options->facebook) :?><li><a href="<?php echo $this->options->facebook ?>" class="iconfont icon-facebook1" target="_blank"><span class="label">Facebook</span></a></li><?php endif; ?>
               <?php if ($this->options->github) :?><li><a href="<?php echo $this->options->github ?>" class="iconfont icon-github" target="_blank"><span class="label">Github</span></a></li><?php endif; ?>
               <?php if ($this->options->youtube) :?><li><a href="<?php echo $this->options->youtube ?>" class="iconfont icon-youtube" target="_blank"><span class="label">YouTube</span></a></li><?php endif; ?>
-              <?php if ($this->options->telegram) :?><li><a href="<?php echo $this->options->telegram ?>" class="iconfont icon-telegram" target="_blank"><span class="label">Email</span></a></li><?php endif; ?>
+              <?php if ($this->options->telegram) :?><li><a href="<?php echo $this->options->telegram ?>" class="iconfont icon-telegram" target="_blank"><span class="label">Telegram</span></a></li><?php endif; ?>
+              <?php if ($this->options->bilibili) :?><li><a href="<?php echo $this->options->bilibili ?>" class="iconfont icon-bilibili-fill" target="_blank"><span class="label">bilibili</span></a></li><?php endif; ?>
             </ul>
 
         </div>

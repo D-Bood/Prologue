@@ -8,12 +8,15 @@ function themeInit() {
 function themeConfig($form) {
 	//Pjax加速
 	$search_form = new Typecho_Widget_Helper_Form_Element_Checkbox('search_form',
-	array('Pjax' => _t('启用Pjax加速站点, 勾上即可, 为使原生评论生效需要到设置-评论, 去掉开启垃圾评论过滤'),),array('ShowSearch'), _t('设置开启Pjax'));
+	array('Pjax' => _t('启用Pjax加速站点, 勾上即可, 为使原生评论生效需要到设置-评论, 去掉开启垃圾评论过滤【 !有Bug，慎用! 】'),),array('ShowSearch'), _t('设置开启Pjax'));
 	$form->addInput($search_form->multiMode());
+
         $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl',NULL,'','博客头像','在这里填入一个图片URL地址, 以在网站标题前加上一个LOGO<br>可使用QQ头像链接作为LOGO https://avatar.dawnlab.me/qq/（这里填QQ）');
         $form->addInput($logoUrl);
+
         $background = new Typecho_Widget_Helper_Form_Element_Text('background',NULL,'','博客默认封面图','在这里填入一个图片URL地址, 给博客添加一个默认封面图');
         $form->addInput($background);
+
         $github = new Typecho_Widget_Helper_Form_Element_Text('github',NULL,"https://github.com",'Github','在这里填入一个Github地址, 给博客添加一个Github联系方式');
         $form->addInput($github);
 
@@ -28,6 +31,9 @@ function themeConfig($form) {
 
         $telegram = new Typecho_Widget_Helper_Form_Element_Text('telegram',NULL,"https://telegram.com",'Telegram','在这里填入一个Telegram地址, 给博客添加一个Telegram联系方式');
         $form->addInput($telegram);
+
+        $bilibili = new Typecho_Widget_Helper_Form_Element_Text('bilibili',NULL,"https://bilibili.com",'bilibili','在这里填入一个bilibili地址, 给博客添加一个bilibili联系方式');
+        $form->addInput($bilibili);
 }
 
 //获取评论的锚点链接
