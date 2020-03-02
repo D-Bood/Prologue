@@ -96,11 +96,14 @@ echo $commentClass;
     			<input type="url" name="url" placeholder="网站" id="url" class="text" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
             </div>
             <div class="6u$ 12u$(mobile)" id="recaptcha">
-            <?php if(!empty($this->options->search_form) && in_array('Pjax', $this->options->search_form)): ?>
+            <?php if((isset($this->options->plugins['activated']['reCAPTCHA'])) && in_array('Pjax', $this->options->search_form)): ?>
             <div class="g-recaptcha" data-sitekey="6Le8yigUAAAAANf5EpB5kLb49-ZHcGpKw_w1HbaS"></div>
-            <?php else: ?>
-            <?php reCAPTCHA_Plugin::output(); ?>
-            <?php endif; ?>
+            <?php elseif(isset($this->options->plugins['activated']['reCAPTCHA'])): reCAPTCHA_Plugin::output();
+            endif; ?>
+            <?php if((isset($this->options->plugins['activated']['reCAPTCHA'])) && in_array('Pjax', $this->options->search_form)): ?>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse"></input>
+            <?php elseif(isset($this->options->plugins['activated']['reCAPTCHAv3'])): reCAPTCHAv3_Plugin::output();
+            endif; ?>
             </div>
             <?php endif; ?>
     		<div class="12u$">
