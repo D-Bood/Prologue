@@ -8,7 +8,7 @@
             <p><?php _e('你想查看的页面已被转移或删除了, 要不要搜索看看: '); ?></p>
             <form method="post">
                 <p><input type="text" name="s" class="text" style="margin: 1em 0 1em 0" autofocus /></p>
-                <p><button type="submit" class="submit" style="font-size: 1em"><i class="icon fa-search"></i></button></p>
+                <p><button type="submit" class="submit" style="font-size: 1em"><i class="iconfont icon-search"></i></button></p>
             </form>
   </div>
 </section>
