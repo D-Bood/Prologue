@@ -6,9 +6,10 @@
     */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-    <?php if (!$this->user->hasLogin()):?>
-        <script>window.location.href="/404";</script>
-    <?php endif; ?>
+    <?php if (!$this->user->hasLogin()):
+         $this->need('404.php'); //header("Location: /404"); 
+         exit;
+    endif; ?>
 
 <div id="main">
 <section class="one dark cover">

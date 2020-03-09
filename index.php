@@ -20,7 +20,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       <div class="container">
 
        <header>
-       <h2 class="alt"><p style="font-size: 1.8em; color: #fff;"><?php hitokoto() ?></p></h2>
+       <h2 class="alt"><p style="font-size: 1.8em; color: #fff;"><?php hitokoto();?></p></h2>
        </header>
 
       </div>
