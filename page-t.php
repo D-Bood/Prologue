@@ -7,9 +7,9 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); 
       if (!$this->user->hasLogin()):
-          $this->need('404.php'); //header("Location: /404"); 
+          $this->need('404.php'); 
           exit;
-      endif;
+endif;
 ?>
 
 <div id="main">
