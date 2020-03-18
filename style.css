@@ -2295,7 +2295,6 @@
         }
 
       #nav ul li a:hover {
-        box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
         color: #fff;
       }
 
@@ -2304,6 +2303,7 @@
         }
 
         #nav ul li .selected {
+          box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
           background: rgba(0, 0, 0, 0.15);
         }
 
