@@ -34,6 +34,9 @@ function themeConfig($form) {
 
         $bilibili = new Typecho_Widget_Helper_Form_Element_Text('bilibili',NULL,"https://bilibili.com",'bilibili','在这里填入一个bilibili地址, 给博客添加一个bilibili联系方式');
         $form->addInput($bilibili);
+
+        $footerMessage = new Typecho_Widget_Helper_Form_Element_Text('footerMessage',NULL,"",'底部信息','在这里填入一个底部信息, 给博客添加一个底部信息');
+        $form->addInput($footerMessage);
 }
 
 //获取评论的锚点链接
